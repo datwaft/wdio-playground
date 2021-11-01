@@ -1,4 +1,4 @@
-export const config = {
+exports.config = {
   specs: ["./test/specs/**/*.js"],
   exclude: [],
   maxInstances: 10,
