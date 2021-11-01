@@ -1,0 +1,14 @@
+{
+  "name": "playground",
+  "version": "0.1.0",
+  "description": "WebDriverIO playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WebDriverIO"
+  ],
+  "author": "David Guevara",
+  "license": "MIT"
+}
