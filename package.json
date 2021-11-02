@@ -4,7 +4,7 @@
   "description": "WebDriverIO playground",
   "main": "index.js",
   "scripts": {
-    "test": "wdio run wdio.conf.js"
+    "test": "wdio"
   },
   "keywords": [
     "WebDriverIO"
