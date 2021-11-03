@@ -1,5 +1,5 @@
-exports.config = {
-  specs: ["./test/specs/**/*.js"],
+export const config: WebdriverIO.Config = {
+  specs: ["./test/specs/**/*.ts"],
   exclude: [],
   maxInstances: 10,
   capabilities: [
@@ -10,6 +10,10 @@ exports.config = {
     },
   ],
   logLevel: "info",
+  logLevels: {
+    webdriver: "info",
+    "@wdio/appium-service": "info",
+  },
   bail: 0,
   baseUrl: "https://the-internet.herokuapp.com",
   waitforTimeout: 10000,
@@ -17,18 +21,9 @@ exports.config = {
   connectionRetryCount: 3,
   services: ["chromedriver"],
   framework: "mocha",
-  reporters: ["spec", ["allure", { outputDir: "allure-results" }]],
+  reporters: ["spec"],
   mochaOpts: {
     ui: "bdd",
     timeout: 60000,
-  },
-  afterTest: async function (
-    test,
-    context,
-    { error, result, duration, passed, retries }
-  ) {
-    if (!passed) {
-      await browser.takeScreenshot();
-    }
   },
 };
