@@ -11,4 +11,11 @@ describe("My Login application", () => {
       "You logged into a secure area!"
     );
   });
+
+  it("should logout and verify logout", async () => {
+    await SecurePage.btnLogout.click();
+    await expect(LoginPage.flashAlert).toHaveTextContaining(
+      "You logged out of the secure area!"
+    );
+  });
 });

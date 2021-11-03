@@ -1,6 +1,9 @@
 const Page = require("./page");
 
 class LoginPage extends Page {
+  get flashAlert() {
+    return $("#flash");
+  }
   get inputUsername() {
     return $("#username");
   }
@@ -18,7 +21,7 @@ class LoginPage extends Page {
   }
 
   open() {
-    return super.open("login");
+    return super.open("/login");
   }
 }
 
